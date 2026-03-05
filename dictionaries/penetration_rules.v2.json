@@ -1,0 +1,84 @@
+{
+  "META": {
+    "Version": "v2.1",
+    "Scope": "penetration",
+    "UpdatedBy": "OpenClaw",
+    "UpdatedAt": "2026-03-05",
+    "MergedFrom": [
+      "file_99---be05cc4f-fcdb-4b39-a370-5802e25a6da2.txt",
+      "file_100---bd9e8434-24d3-4619-b269-6d4c405b2c54.txt"
+    ]
+  },
+  "ChemSystem": [
+    {
+      "term": "CompositeMaterialToSN08",
+      "aliases": ["複合材料"],
+      "map_to": "SN08",
+      "note": "1umAl@6umPET(Soteria)"
+    },
+    {
+      "term": "SN08-CC02",
+      "aliases": ["SN08-CC02"],
+      "map_to": "SN08",
+      "note": "1umAl@6umPET(Soteria)&6um_Cu"
+    },
+    {
+      "term": "CW_Series",
+      "pattern": "CW(\\d+)",
+      "map_to": "SN08_CW{value}",
+      "note": "captures numeric CW variants, e.g., CW30/CW45/CW60"
+    }
+  ],
+  "Note": [
+    {
+      "term": "Materials",
+      "aliases": ["Al", "Cu", "CC02", "CC03", "Al塗層", "6um"],
+      "action": "append"
+    },
+    {
+      "term": "External",
+      "aliases": ["對外"],
+      "map_to": "ExternalTestCopy"
+    },
+    {
+      "term": "Config",
+      "aliases": ["CCAF&6umCu", "CC02Al&6umCu"],
+      "action": "append"
+    },
+    {
+      "term": "Ratio",
+      "aliases": ["Ratio52", "Ratio25"],
+      "action": "append"
+    },
+    {
+      "term": "Capacity",
+      "pattern": "1C=\\d+mAh",
+      "action": "append"
+    }
+  ],
+  "TestCondition": [
+    {
+      "term": "Thickness",
+      "pattern": "(\\d+\\.?\\d*um\\s?(Al|Cu))",
+      "action": "MoveToNote"
+    },
+    {
+      "term": "Voltage",
+      "aliases": ["4.35V", "4.2V"],
+      "action": "keep"
+    }
+  ],
+  "ParallelCount": [
+    {
+      "pattern": "\\d+\\+\\d+P",
+      "action": "keep",
+      "example": "6+7P"
+    }
+  ],
+  "SampleSerial": [
+    {
+      "pattern": "13-5S\\d+-\\d+",
+      "action": "keep"
+    }
+  ]
+}

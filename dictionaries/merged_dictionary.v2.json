@@ -1,0 +1,52 @@
+{
+  "META": {
+    "Version": "v2.1-merged",
+    "UpdatedBy": "OpenClaw",
+    "UpdatedAt": "2026-03-05",
+    "Description": "Merged dictionary for current penetration parsing + global normalization."
+  },
+  "Global": {
+    "CoreRulesFile": "core_rules.v2.json"
+  },
+  "ByTestItem": {
+    "PENETRATION": {
+      "RulesFile": "penetration_rules.v2.json"
+    },
+    "HEATING": {
+      "RulesFile": "TODO",
+      "Status": "pending"
+    },
+    "OVERCHARGE": {
+      "RulesFile": "TODO",
+      "Status": "pending"
+    },
+    "OVERDISCHARGE": {
+      "RulesFile": "TODO",
+      "Status": "pending"
+    },
+    "EXT_SHORT": {
+      "RulesFile": "TODO",
+      "Status": "pending"
+    },
+    "CRUSH": {
+      "RulesFile": "TODO",
+      "Status": "pending"
+    }
+  },
+  "FieldPriority": [
+    "TestItem",
+    "TestCondition",
+    "ChemSystem",
+    "SampleModel",
+    "SampleSerial",
+    "ParallelCount",
+    "RunVersion",
+    "ResultLevel",
+    "Note"
+  ],
+  "ConflictResolution": {
+    "RunVersion": "prefer regex normalized token",
+    "TempCondition": "apply Global.TempNormalization first",
+    "MaterialAndThickness": "move ambiguous thickness/material tokens to Note"
+  }
+}

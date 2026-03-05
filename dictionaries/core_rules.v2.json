@@ -1,0 +1,24 @@
+{
+  "META": {
+    "Version": "v2.1",
+    "Scope": "global",
+    "UpdatedBy": "OpenClaw",
+    "UpdatedAt": "2026-03-05"
+  },
+  "ExcludedNames": ["Welson", "Henry", "Jason", "Sunny", "Leo"],
+  "TempNormalization": {
+    "RT": ["RT", "室溫", "25C", "25℃", "25°C"],
+    "45℃": ["45C", "45℃", "45°C"],
+    "60℃": ["60C", "60℃", "60°C"]
+  },
+  "TestItemKeywords": {
+    "PENETRATION": ["穿刺", "穿刺影片", "penetration", "nail"],
+    "OVERCHARGE": ["過充", "overcharge"],
+    "HEATING": ["加熱", "heating"],
+    "EXT_SHORT": ["外短", "external_short"],
+    "CRUSH": ["擠壓", "crush"],
+    "OVERDISCHARGE": ["過放", "overdischarge"]
+  },
+  "ResultLevel": ["L1", "L2", "L3", "L4", "L5", "LV1", "LV2", "LV5", "HSL1", "HSL7"],
+  "RunVersionPatterns": ["(?i)run\\d+", "#\\d+R\\d+", "\\d+\\s?RUN"]
+}

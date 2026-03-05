@@ -54,7 +54,12 @@ python parser_v3.py "C:\Users\User\Downloads\Test-052069.csv" "C:\Users\User\Dow
 ---
 
 ## 🛠️ 字典擴充
-你可以在 `parser_v3.py` 的對應字典區塊新增規則，提升命中率。
+目前已建立 `dictionaries/` 架構：
+- `core_rules.v2.json`（全域規則）
+- `penetration_rules.v2.json`（穿刺）
+- `merged_dictionary.v2.json`（總入口）
+
+後續新測項（加熱/過充/過放/外短）可直接新增對應 `*_rules.v2.json`。
 
 ## 📝 版本紀錄
 - **v1.1 (2026-03-05)**：修正 README 指令為可直接執行版本（移除 `--input` 旗標誤導）。
